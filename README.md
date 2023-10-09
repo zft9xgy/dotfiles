@@ -7,7 +7,6 @@ Listar todas las aplicaciones que estan riceadas
 - wofi
 - hyprper
 
-
 Listas carpeta de recursos.
 
 - wallpaper ?
