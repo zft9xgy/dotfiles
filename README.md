@@ -15,3 +15,11 @@ Listas carpeta de recursos.
 - scripts
   -- instalacion
   -- funcionamiento
+
+## Pendiente de configurar
+
+- controles de audio y play desde teclado, revisar playerctl
+- centro de notification
+- control logout, reboot y shutdown
+- boton para cambiar escritorio
+- click derecho para desplegar optiones en escritorio?
