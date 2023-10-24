@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Copy the local configuration to git 
 
 LOCAL_PATH=$HOME/.config/
