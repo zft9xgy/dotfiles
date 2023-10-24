@@ -1,16 +1,16 @@
 {
 	"layer": "top",
     "output": "HDMI-A-1",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
-	"modules-center": ["river/tags"],
-	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-left": ["cpu","memory","tray"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["network","pulseaudio","clock"],
 	
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
 		"format-muted": "{icon} {volume}%",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click":"pavucontrol",
 		"format-icons": {
 			"default": ["", "", ""]
 		}
@@ -19,11 +19,15 @@
     "river/tags": {
 		"num-tags": 6
     },
-	"network": {
-		"tooltip": false,
-		"format-wifi": "  {essid}",
-		"format-ethernet": ""
-	},
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
 	"backlight": {
 		"tooltip": false,
 		"format": " {}%",
@@ -48,7 +52,8 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": "{: %I:%M %p   %d/%m/%Y}"
+        "interval": 1,
+        "format": "{:%H:%M:%S ○ %d/%m/%Y}"
     },
     "cpu": {
         "interval": 15,

@@ -15,12 +15,11 @@ source $ZSH/oh-my-zsh.sh
 alias confhy="code ~/.config/hypr/hyprland.conf"
 alias confzsh="code ~/.zshrc"
 alias confhp="code ~/.config/hypr/hyprpaper.conf"
+alias local2dot="sh ~/shared-across/dotfiles/scripts/local2dot.sh"
 
 # Apps
 alias gamma="sh ~/shared-across/opt/gamma-auto.sh"
 alias reload="sh ~/shared-across/dotfiles/scripts/reload.sh"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias filenio="~/shared-across/opt/filen.AppImage &>/dev/null & disown"
 
 # todo app
