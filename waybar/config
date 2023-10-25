@@ -3,7 +3,7 @@
     "output": "HDMI-A-1",
 	"modules-left": ["cpu","memory","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["network","pulseaudio","clock"],
+	"modules-right": ["custom/wallpaper","network","pulseaudio","clock"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -95,7 +95,7 @@
         "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
     },
     "custom/wallpaper":{
-        "format":" ",
-        "on-click": "bash ~/.config/system_scripts/pkill_bc"
+        "format":"",
+        "on-click": "sh ~/shared-across/dotfiles/scripts/random-wall.sh"
     }
 }
