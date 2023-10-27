@@ -18,9 +18,12 @@
 		}
 	},
 
-    "river/tags": {
-		"num-tags": 6
-    },
+    "hyprland/workspaces": {
+        "all-outputs": true,    
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true,
+      },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)",
