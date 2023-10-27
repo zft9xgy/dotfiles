@@ -2,13 +2,18 @@
 
 source $HOME/shared-across/dotfiles/scripts/variables.sh
 
-NEW_WALL=$(find $WALLPAPERS_PATH -type f | shuf -n 1)
+if [ -z "$1" ]; then
+  echo "Error: Debes proporcionar el path del wallpaper \$1."
+  exit 1
+fi
 
 # Muy manual pero ya buscaré una manera mas sofisticada
 
 echo '' > $(echo $HYPR_DIR)
-echo "preload = $NEW_WALL" >> $(echo $HYPR_DIR)
-echo "wallpaper =,$NEW_WALL" >> $(echo $HYPR_DIR)
+echo "preload = $1" >> $(echo $HYPR_DIR)
+echo "wallpaper =,$1" >> $(echo $HYPR_DIR)
 
-wal -q -i $NEW_WALL 
+wal -q -i $1 
 sh ~/shared-across/dotfiles/scripts/reload.sh
+
+exit 0

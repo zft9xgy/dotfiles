@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Copy the local configuration to git 
 
-LOCAL_PATH=$HOME/.config/
-DOT_PATH=$HOME/shared-across/dotfiles/
+source $HOME/shared-across/dotfiles/scripts/variables.sh
 
 #hyprland
 echo "Local path:$LOCAL_PATH"

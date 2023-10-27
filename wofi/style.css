@@ -1,9 +1,10 @@
-/* Mocha Sapphire */
-/* @define-color accent #74c7ec; */
-@define-color txt #cad3f5;
-@define-color bg #24273a;
-@define-color bg2 #494d64;
-@define-color accent #f9e2af;
+@import '/home/jade/.cache/wal/colors-waybar.css';
+
+@define-color txt @color7;
+@define-color bg @color0;
+@define-color bg2 @color4;
+@define-color bginput @color9;
+@define-color accent @color11;
 
  * {
     font-family: 'JetBrains Mono Nerd Font', monospace;
@@ -73,7 +74,7 @@
     padding: 10px;
     border: none;
     color: @accent;
-    background-color: @bg2;
+    background-color: @bginput;
     animation: fadeIn 0.5s ease-in-out both;
  }
 
@@ -102,5 +103,5 @@ font-weight: bold;
 
 
  #entry:selected #text {
-    color: @text;
+    color: @txt;
  }

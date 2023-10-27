@@ -15,7 +15,9 @@ source $ZSH/oh-my-zsh.sh
 alias confhy="code ~/.config/hypr/hyprland.conf"
 alias confzsh="code ~/.zshrc"
 alias confhp="code ~/.config/hypr/hyprpaper.conf"
+alias confdot="code ~/shared-across/dotfiles"
 alias local2dot="sh ~/shared-across/dotfiles/scripts/local2dot.sh"
+alias newwall="sh ~/shared-across/dotfiles/scripts/select-wall.sh"
 
 # Apps
 alias gamma="sh ~/shared-across/opt/gamma-auto.sh"
