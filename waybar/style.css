@@ -1,18 +1,20 @@
+/* 27 de octubre de 2023 */
+/* primer diseño teniendo en cuenta paleta de colores de pywal */
+
+@import '/home/jade/.cache/wal/colors-waybar.css';
+
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color textcolor @cursor;
+
+
 * {
-	border: none;
-	border-radius: 5;
     font-family: "JetbrainsMono Nerd Font" ;
 	font-size: 15px;
-	min-height: 10px;
+	border: none;
+	border-radius: 5;
 }
 
-window#waybar {
-	background: transparent;
-}
-
-window#waybar.hidden {
-	opacity: 0.2;
-}
 
 #window {
 	margin-top: 6px;
@@ -24,6 +26,16 @@ window#waybar.hidden {
 	background: transparent;
 }
 
+window#waybar {
+	background: none;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+
+
 .modules-left,
 .modules-center,
 .modules-right{
@@ -32,6 +44,8 @@ window#waybar.hidden {
 
 #workspaces,#memory,#tray,#network,#pulseaudio,#cpu,#clock,#custom-wallpaper{
 	margin: 0px 3px;
+	background: @bg;
+	color: @cursor;
 }
 
 #cpu{
@@ -43,20 +57,21 @@ window#waybar.hidden {
 
 
 #workspaces{
-	color: #161320;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 5px;
 	transition: none;
-	background: #C9CBFF;
 }
 
 #workspaces button {
-	color: #161320;
+
 }
 
 #workspaces button.active{
 	font-weight: bold;
+	border-bottom: 2px solid @fg;
+	border-radius: 0px;
+	color: @color8;
   }
 
 
@@ -66,8 +81,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 5px;
 	transition: none;
-	color: #161320;
-	background: #C9CBFF;
+	color: @color3
 }
 
 #network {
@@ -76,8 +90,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 5px;
 	transition: none;
-	color: #161320;
-	background: #bd93f9;
+	color: @color5;
 }
 
 #pulseaudio {
@@ -86,18 +99,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 5px;
 	transition: none;
-	color: #1A1826;
-	background: #FAE3B0;
+	color: @color6;
 }
-
-
-@keyframes blink {
-    to {
-        background-color: #BF616A;
-        color: #B5E8E0;
-    }
-}
-
 
 #clock {
 	padding-left: 10px;
@@ -105,9 +108,9 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 5px;
 	transition: none;
-	color: #161320;
-	background: #ABE9B3;
-	/*background: #1A1826;*/
+	font-weight: bold;
+	color: @fg;
+
 }
 
 #memory {
@@ -116,8 +119,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 5px;
 	transition: none;
-	color: #161320;
-	background: #DDB6F2;
+	color: @color5;
 }
 
 
@@ -128,8 +130,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 5px;
 	transition: none;
-	color: #161320;
-	background: #96CDFB;
+	color: @color6;
 }
 
 #tray {
@@ -138,6 +139,5 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 5px;
 	transition: none;
-	color: #B5E8E0;
-	background: #161320;
+	color: @color7;
 }

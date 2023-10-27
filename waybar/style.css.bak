@@ -1,115 +1,143 @@
-@import "mocha.css";
-
 * {
-  padding: 0px;
-  margin: 0;
-  color: @text;
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 18px;
+	border: none;
+	border-radius: 5;
+    font-family: "JetbrainsMono Nerd Font" ;
+	font-size: 15px;
+	min-height: 10px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 5px;
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+    color: transparent;
+	background: transparent;
 }
 
 .modules-left,
 .modules-center,
 .modules-right{
-  padding: 0px 10px;
-  margin: 5px;
-  border-radius: 5px;
-  background-color: alpha(@mantle,0.5);
-  
+	padding: 5px;
 }
 
-.modules-left {
-  padding-left: 0px;
+#workspaces,#memory,#tray,#network,#pulseaudio,#cpu,#clock,#custom-wallpaper{
+	margin: 0px 3px;
 }
 
-.modules-center {
-
+#cpu{
+	margin-left: 0px;
 }
-
-.modules-right {
-padding-right: 0px;
+#clock{
+	margin-right: 0px;
 }
 
 
-/* Left */
+#workspaces{
+	color: #161320;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+	background: #C9CBFF;
+}
+
+#workspaces button {
+	color: #161320;
+}
+
 #workspaces button.active{
-  border-bottom: 2px solid @text;
-}
-
-#workspaces button:nth-child(1) label {
-  color: @sapphire;
-  margin: 0px 8px;
-}
-
-#workspaces button:nth-child(2) label {
-  color: @sky;
-  margin: 0px 8px;
-}
-
-#workspaces button:nth-child(3) label {
-  color: @teal;
-  margin: 0px 8px;
-}
-
-#workspaces button:nth-child(4) label {
-  color: @green;
-  margin: 0px 8px;
-}
-
-#workspaces button:nth-child(5) label {
-  color: @yellow;
-  margin: 0px 8px;
-}
+	font-weight: bold;
+  }
 
 
-/* Center */
-#clock {
-  color: @text;
-}
-
-
-/* Right */
-#cpu,
-#memory,
-#temperature {
-  padding: 5px;
-  border-radius: 5px;
-}
-
-#cpu {
-  color: @yellow;
-}
-
-#memory {
-  color: @green;
-}
-
-#temperature {
-  color: @blue;
-}
-
-#custom-window-name {
-  color: @text;
-}
-
-#pulseaudio,
-#backlight {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#pulseaudio {
-  color: @sky;
-  padding: 0px 10px 0px 0px;
-  border-radius: 5px;
+#custom-wallpaper {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+	transition: none;
+	color: #161320;
+	background: #C9CBFF;
 }
 
 #network {
-  color: @rosewater;
-  margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+	transition: none;
+	color: #161320;
+	background: #bd93f9;
+}
+
+#pulseaudio {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+	transition: none;
+	color: #1A1826;
+	background: #FAE3B0;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #BF616A;
+        color: #B5E8E0;
+    }
+}
+
+
+#clock {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+	transition: none;
+	color: #161320;
+	background: #ABE9B3;
+	/*background: #1A1826;*/
+}
+
+#memory {
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+	color: #161320;
+	background: #DDB6F2;
+}
+
+
+
+#cpu {
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+	color: #161320;
+	background: #96CDFB;
+}
+
+#tray {
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+	color: #B5E8E0;
+	background: #161320;
 }

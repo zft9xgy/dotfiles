@@ -1,6 +1,8 @@
 {
 	"layer": "top",
     "output": "HDMI-A-1",
+    "spacing": 5,
+    "height": 20,
 	"modules-left": ["cpu","memory","tray"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["custom/wallpaper","network","pulseaudio","clock"],
@@ -53,7 +55,7 @@
 	},
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S ○ %d/%m/%Y}"
+        "format": "{:%H:%M:%S ○ %a %d %b}"
     },
     "cpu": {
         "interval": 15,
@@ -64,35 +66,6 @@
         "interval": 30,
         "format": " {}%",
         "max-length": 10
-    },
-    "custom/media": {
-        "interval": 30,
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 20,
-        "format-icons": {
-            "spotify": " ",
-            "default": " "
-        },
-        "escape": true,
-        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-        "on-click": "playerctl play-pause"
-    },
-    "custom/launcher":{
-        "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi"
-    },
-    "custom/power":{
-        "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/leave.sh",
-    },
-    "custom/updates":{
-        "format": "{} Update(s)",
-        "exec": "checkupdates | wc -l",
-        "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-        "interval": 15,
-        "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
     },
     "custom/wallpaper":{
         "format":"",
