@@ -1,8 +1,9 @@
 /* Mocha Sapphire */
-@define-color accent #74c7ec;
+/* @define-color accent #74c7ec; */
 @define-color txt #cad3f5;
 @define-color bg #24273a;
 @define-color bg2 #494d64;
+@define-color accent #f9e2af;
 
  * {
     font-family: 'JetBrains Mono Nerd Font', monospace;
@@ -16,8 +17,7 @@
     border: 1px solid @accent;
     border-radius: 5px;
     background-color: @bg;
-    animation: slideIn 0.5s ease-in-out both;
-  
+    animation: slideIn 0.5s ease-in-out both;  
 }
 
  /* Slide In */
@@ -38,6 +38,7 @@
     border: none;
     background-color: @bg;
     animation: fadeIn 0.5s ease-in-out both;
+
  }
 
  /* Fade In */
@@ -94,8 +95,7 @@
 */
 
 #entry:selected {
-  background: rgb(116,199,236);
-background: radial-gradient(circle, rgba(116,199,236,1) 0%, rgba(148,226,213,1) 50%, rgba(166,227,161,1) 100%);  
+  background: @bg2;
 border-radius: 5px;
 font-weight: bold;
 }
