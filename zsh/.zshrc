@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+#ZSH_THEME="af-magic"
 ZSH_THEME="af-magic"
 
 plugins=(sudo git zsh-autosuggestions zsh-syntax-highlighting)
@@ -20,7 +21,7 @@ alias local2dot="sh ~/shared-across/dotfiles/scripts/local2dot.sh"
 alias newwall="sh ~/shared-across/dotfiles/scripts/select-wall.sh"
 
 # Apps
-alias gamma="sh ~/shared-across/opt/gamma-auto.sh"
+alias gamma="sh ~/shared-across/dotfiles/scripts/gamma-auto.sh"
 alias reload="sh ~/shared-across/dotfiles/scripts/reload.sh"
 alias filenio="~/shared-across/opt/filen.AppImage &>/dev/null & disown"
 
@@ -28,3 +29,10 @@ alias filenio="~/shared-across/opt/filen.AppImage &>/dev/null & disown"
 alias add="sh ~/shared-across/opt/todux/add.sh"
 alias list="cat -b ~/shared-across/opt/todux/todo.md"
 alias todo="nano ~/shared-across/opt/todux/todo.md"
+
+
+#python
+alias py3="python3"
+alias pystart="source ~/shared-across/opt/python-env/bin/activate"
+alias pystop="deactivate"
+

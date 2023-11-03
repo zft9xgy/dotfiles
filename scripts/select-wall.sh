@@ -2,11 +2,8 @@
 
 source $HOME/shared-across/dotfiles/scripts/variables.sh
 
-
 NEW_WALL=$(ls $WALLPAPERS_PATH | wofi --dmenu --allow-images true)
 
-
-$WALLPAPERS_PATH$NEW_WALL
 
 echo '' > $(echo $HYPR_DIR)
 echo "preload = $WALLPAPERS_PATH$NEW_WALL" >> $(echo $HYPR_DIR)
