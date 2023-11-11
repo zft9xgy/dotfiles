@@ -32,7 +32,7 @@ alias todo="nano ~/shared-across/opt/todux/todo.md"
 
 
 #python
-alias py3="python3"
+alias p3="python3"
 alias pystart="source ~/shared-across/opt/python-env/bin/activate"
 alias pystop="deactivate"
 

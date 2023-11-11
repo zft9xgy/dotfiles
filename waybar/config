@@ -1,29 +1,50 @@
 {
-	"layer": "top",
-    "output": "HDMI-A-1",
+    "layer": "top",
     "spacing": 5,
     "height": 20,
-	"modules-left": ["cpu","memory","tray"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/wallpaper","network","pulseaudio","clock"],
-	
-	"pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-		"format": "{icon} {volume}%",
-		"format-muted": "{icon} {volume}%",
-		"on-click":"pavucontrol",
-		"format-icons": {
-			"default": ["", "", ""]
-		}
-	},
-
+    "modules-left": [
+        "cpu",
+        "memory",
+        "tray"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/wallpaper",
+        "network",
+        "pulseaudio",
+        "custom/backlight",
+        "clock"
+    ],
+    "pulseaudio": {
+        "tooltip": false,
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "Muted",
+        "on-click": "pavucontrol",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    /* https://manpages.ubuntu.com/manpages/focal/en/man5/waybar-sway-workspaces.5.html*/
     "hyprland/workspaces": {
-        "all-outputs": true,    
-        "format": "{name}",
+        "all-outputs": true,
         "on-click": "activate",
         "sort-by-number": true,
-      },
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": ""
+        }
+    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)",
@@ -32,13 +53,13 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-	"backlight": {
-		"tooltip": false,
-		"format": " {}%",
-		"interval":1,
+    "backlight": {
+        "tooltip": false,
+        "format": " {}%",
+        "interval": 1,
         "on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5"
-	},
+        "on-scroll-down": "light -U 5"
+    },
     "battery": {
         "states": {
             "good": 95,
@@ -49,12 +70,18 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
-	"tray":{
-		"icon-size":18,
-		"spacing": 10
-	},
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
     "clock": {
         "interval": 1,
         "format": "{:%H:%M:%S ○ %a %d %b}"
@@ -69,8 +96,17 @@
         "format": " {}%",
         "max-length": 10
     },
-    "custom/wallpaper":{
-        "format":"",
+    "custom/wallpaper": {
+        "format": "",
         "on-click": "sh ~/shared-across/dotfiles/scripts/random-wall.sh"
+    },
+    "custom/backlight": {
+        "format": "{}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/shared-across/dotfiles/scripts/get-brightness.sh",
+        "restart-interval": 10,
+        "tooltip": false
     }
 }

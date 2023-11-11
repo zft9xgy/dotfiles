@@ -9,7 +9,7 @@
 
 
 * {
-    font-family: "JetbrainsMono Nerd Font" ;
+	font-family: "JetbrainsMono Nerd Font";
 	font-size: 15px;
 	border: none;
 	border-radius: 5;
@@ -22,7 +22,7 @@
 	padding-right: 10px;
 	border-radius: 5px;
 	transition: none;
-    color: transparent;
+	color: transparent;
 	background: transparent;
 }
 
@@ -38,41 +38,48 @@ window#waybar.hidden {
 
 .modules-left,
 .modules-center,
-.modules-right{
+.modules-right {
 	padding: 5px;
 }
 
-#workspaces,#memory,#tray,#network,#pulseaudio,#cpu,#clock,#custom-wallpaper{
+#workspaces,
+#memory,
+#tray,
+#network,
+#pulseaudio,
+#cpu,
+#clock,
+#custom-wallpaper,
+#custom-backlight {
 	margin: 0px 3px;
 	background: @bg;
 	color: @cursor;
 }
 
-#cpu{
+#cpu {
 	margin-left: 0px;
 }
-#clock{
+
+#clock {
 	margin-right: 0px;
 }
 
 
-#workspaces{
+#workspaces {
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 5px;
 	transition: none;
 }
 
-#workspaces button {
+#workspaces button {}
 
-}
-
-#workspaces button.active{
+#workspaces button.active {
 	font-weight: bold;
 	border-bottom: 2px solid @fg;
 	border-radius: 0px;
 	color: @color8;
-  }
+}
 
 
 #custom-wallpaper {
@@ -100,6 +107,15 @@ window#waybar.hidden {
 	border-radius: 5px;
 	transition: none;
 	color: @color6;
+}
+
+#custom-backlight {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+	transition: none;
+	color: @color3;
 }
 
 #clock {
