@@ -89,16 +89,19 @@
     "cpu": {
         "interval": 15,
         "format": " {}%",
-        "max-length": 10
+        "max-length": 10,
+        "on-click": "kitty -e btop"
     },
     "memory": {
         "interval": 30,
         "format": " {}%",
-        "max-length": 10
+        "max-length": 10,
+        "on-click": "kitty -e btop"
     },
     "custom/wallpaper": {
         "format": "",
-        "on-click": "sh ~/shared-across/dotfiles/scripts/random-wall.sh"
+        "on-click": "sh ~/shared-across/dotfiles/scripts/random-wall.sh",
+        "on-click-right": "thunar ~/shared-across/wallpapers"
     },
     "custom/backlight": {
         "format": "{}",

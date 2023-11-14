@@ -15,6 +15,7 @@ echo ""
 # kitty 
 # foot
 # zsh -> en otra ruta
+# thunar
 
 cp -r $LOCAL_PATH/waybar/ $DOT_PATH
 echo "[waybar] done..."
@@ -31,8 +32,13 @@ echo "[kitty] done..."
 cp -r $LOCAL_PATH/foot/ $DOT_PATH
 echo "[foot] done..."
 
+cp -r $LOCAL_PATH/Thunar/ $DOT_PATH
+echo "[thunar] done..."
+
+
 cp -r $HOME/.zshrc $DOT_PATH/zsh/
 echo "[.zshrc] done..."
+
 
 echo ""
 echo "[all] done..."
