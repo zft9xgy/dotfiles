@@ -32,8 +32,17 @@ echo "[kitty] done..."
 cp -r $LOCAL_PATH/foot/ $DOT_PATH
 echo "[foot] done..."
 
+cp -r $LOCAL_PATH/wlogout/ $DOT_PATH
+echo "[wlogout] done..."
+
 cp -r $LOCAL_PATH/Thunar/ $DOT_PATH
 echo "[thunar] done..."
+
+cp -r $LOCAL_PATH/wal/ $DOT_PATH
+echo "[pywal] done..."
+
+cp -r $LOCAL_PATH/swaylock/ $DOT_PATH
+echo "[swaylock] done..."
 
 
 cp -r $HOME/.zshrc $DOT_PATH/zsh/
