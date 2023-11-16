@@ -3,16 +3,18 @@
     "spacing": 5,
     "height": 20,
     "modules-left": [
+        "custom/exit",
         "cpu",
         "memory",
-        "tray"
+        "tray",
+        "hyprland/window"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
         "custom/wallpaper",
-        "network",
+        // "network",
         "pulseaudio",
         "custom/backlight",
         "clock"
@@ -43,10 +45,15 @@
             "3": "",
             "4": "",
             "5": ""
+        },
+        "persistent_workspaces": {
+            "*": 4
         }
     },
+    "hyprland/window": {  
+        "format": "{}"  
+    },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
@@ -110,6 +117,11 @@
         "return-type": "json",
         "exec": "~/shared-across/dotfiles/scripts/get-brightness.sh",
         "restart-interval": 10,
+        "tooltip": false
+    },
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
         "tooltip": false
     }
 }

@@ -26,6 +26,9 @@ echo "[wofi] done..."
 cp -r $LOCAL_PATH/hypr/ $DOT_PATH
 echo "[hypr] done..."
 
+cp -r $LOCAL_PATH/neofetch/ $DOT_PATH
+echo "[neofetch] done..."
+
 cp -r $LOCAL_PATH/kitty/ $DOT_PATH
 echo "[kitty] done..."
 

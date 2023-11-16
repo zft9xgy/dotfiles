@@ -12,7 +12,7 @@
 	font-family: "JetbrainsMono Nerd Font";
 	font-size: 15px;
 	border: none;
-	border-radius: 5;
+	border-radius: 0px;
 }
 
 
@@ -28,7 +28,9 @@
 
 window#waybar {
 	background: none;
-}
+} 
+
+
 
 window#waybar.hidden {
 	opacity: 0.2;
@@ -39,9 +41,11 @@ window#waybar.hidden {
 .modules-left,
 .modules-center,
 .modules-right {
-	padding: 5px;
+	padding: 0 5px;
+	margin: 5px;
 }
 
+/** common properties **/
 #workspaces,
 #memory,
 #tray,
@@ -50,13 +54,17 @@ window#waybar.hidden {
 #cpu,
 #clock,
 #custom-wallpaper,
-#custom-backlight {
-	margin: 0px 3px;
+#custom-backlight,
+#custom-exit {
+	margin: 0px;
+	border-radius: 20px;
 	background: @bg;
 	color: @cursor;
 }
 
-#cpu {
+
+
+#custom-exit {
 	margin-left: 0px;
 }
 
@@ -66,10 +74,9 @@ window#waybar.hidden {
 
 
 #workspaces {
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 5px;
-	transition: none;
+	padding: 0 20px;
+	border-radius: 20px;
+	/** transition: none; **/
 }
 
 #workspaces button {}
@@ -86,7 +93,6 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 5px;
 	transition: none;
 	color: @color3
 }
@@ -95,7 +101,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 5px;
+	border-radius: 10px;
 	transition: none;
 	color: @color5;
 }
@@ -104,7 +110,6 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 5px;
 	transition: none;
 	color: @color6;
 }
@@ -113,7 +118,6 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 5px;
 	transition: none;
 	color: @color3;
 }
@@ -122,7 +126,6 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 5px;
 	transition: none;
 	font-weight: bold;
 	color: @fg;
@@ -133,18 +136,23 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 5px;
 	transition: none;
 	color: @color5;
 }
 
 
+#custom-exit{
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	transition: none;
+	color: @color7;
+}
 
 #cpu {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 5px;
 	transition: none;
 	color: @color6;
 }
@@ -153,7 +161,10 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 5px;
 	transition: none;
 	color: @color7;
 }
+
+
+
+
