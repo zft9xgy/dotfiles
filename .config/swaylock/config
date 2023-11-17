@@ -14,10 +14,10 @@ datestr=%a, %e of %B
 image=~/.cache/current_wallpaper
 
 # Fade in time
-fade-in=1
+fade-in=0
 
 # Effect for background
-effect-blur=10x6
+effect-blur=5x5
 # effect-greyscale
 # effect-pixelate=5
 

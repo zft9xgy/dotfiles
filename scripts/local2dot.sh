@@ -47,6 +47,8 @@ echo "[pywal] done..."
 cp -r $LOCAL_PATH/swaylock/ $DOT_PATH
 echo "[swaylock] done..."
 
+cp -r $LOCAL_PATH/dunst/ $DOT_PATH
+echo "[dunst] done..."
 
 cp -r $HOME/.zshrc $DOT_PATH/zsh/
 echo "[.zshrc] done..."
