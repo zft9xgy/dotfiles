@@ -30,3 +30,6 @@ alias py="python"
 alias pystart='source "/home/jade/pyenvs/"$(ls ~/pyenvs | wofi --dmenu)"/bin/activate"'
 alias pystop="deactivate"
 
+#pacman
+alias psyu="sudo pacman -Syu"
+alias ysyu="sudo yay -Syu"
