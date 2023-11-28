@@ -17,7 +17,7 @@ image=~/.cache/current_wallpaper
 fade-in=0
 
 # Effect for background
-effect-blur=5x5
+# effect-blur=5x5
 # effect-greyscale
 # effect-pixelate=5
 

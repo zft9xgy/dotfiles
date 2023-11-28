@@ -20,9 +20,15 @@ Text=wall
 Mode=THUNAR_SBR_INSERT_MODE_OVERWRITE
 OffsetMode=THUNAR_SBR_OFFSET_MODE_RIGHT
 
+[ThunarSbrDateRenamer]
+Offset=0
+Mode=THUNAR_SBR_DATE_MODE_NOW
+Format=%Y%m%d
+OffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+
 [ThunarSbrReplaceRenamer]
 CaseSensitive=FALSE
 Replacement=
-Pattern=.jpg
+Pattern=wallpaperflare.com
 Regexp=FALSE
 

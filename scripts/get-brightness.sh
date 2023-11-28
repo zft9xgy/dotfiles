@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 brightness=$(ddcutil getvcp 10 | awk '{print $9}' | tr -d ',')
 contrast=$(ddcutil getvcp 12 | awk '{print $9}' | tr -d ',')
 

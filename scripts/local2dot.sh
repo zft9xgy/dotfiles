@@ -6,6 +6,7 @@ source $HOME/shared-across/dotfiles/scripts/variables.sh
 #hyprland
 echo "Local path:$LOCAL_PATH"
 echo "Dotfiles path:$DOT_PATH"
+echo "Dotfiles.config path $CONFIG_PATH"
 echo "Starting copying process..."
 echo ""
 
@@ -17,40 +18,40 @@ echo ""
 # zsh -> en otra ruta
 # thunar
 
-cp -r $LOCAL_PATH/waybar/ $DOT_PATH
+cp -r $LOCAL_PATH/waybar/ $CONFIG_PATH
 echo "[waybar] done..."
 
-cp -r $LOCAL_PATH/wofi/ $DOT_PATH
+cp -r $LOCAL_PATH/wofi/ $CONFIG_PATH
 echo "[wofi] done..."
 
-cp -r $LOCAL_PATH/hypr/ $DOT_PATH
+cp -r $LOCAL_PATH/hypr/ $CONFIG_PATH
 echo "[hypr] done..."
 
-cp -r $LOCAL_PATH/neofetch/ $DOT_PATH
+cp -r $LOCAL_PATH/neofetch/ $CONFIG_PATH
 echo "[neofetch] done..."
 
-cp -r $LOCAL_PATH/kitty/ $DOT_PATH
+cp -r $LOCAL_PATH/kitty/ $CONFIG_PATH
 echo "[kitty] done..."
 
-cp -r $LOCAL_PATH/foot/ $DOT_PATH
+cp -r $LOCAL_PATH/foot/ $CONFIG_PATH
 echo "[foot] done..."
 
-cp -r $LOCAL_PATH/wlogout/ $DOT_PATH
+cp -r $LOCAL_PATH/wlogout/ $CONFIG_PATH
 echo "[wlogout] done..."
 
-cp -r $LOCAL_PATH/Thunar/ $DOT_PATH
+cp -r $LOCAL_PATH/Thunar/ $CONFIG_PATH
 echo "[thunar] done..."
 
-cp -r $LOCAL_PATH/wal/ $DOT_PATH
+cp -r $LOCAL_PATH/wal/ $CONFIG_PATH
 echo "[pywal] done..."
 
-cp -r $LOCAL_PATH/swaylock/ $DOT_PATH
+cp -r $LOCAL_PATH/swaylock/ $CONFIG_PATH
 echo "[swaylock] done..."
 
-cp -r $LOCAL_PATH/dunst/ $DOT_PATH
+cp -r $LOCAL_PATH/dunst/ $CONFIG_PATH
 echo "[dunst] done..."
 
-cp -r $HOME/.zshrc $DOT_PATH/zsh/
+cp -r $HOME/.zshrc $CONFIG_PATH
 echo "[.zshrc] done..."
 
 
