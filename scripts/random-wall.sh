@@ -11,6 +11,7 @@ echo '' > $(echo $HYPR_DIR)
 
 echo "preload = $NEW_WALL" >> $(echo $HYPR_DIR)
 echo "wallpaper =,$NEW_WALL" >> $(echo $HYPR_DIR)
+echo "splash = false" >> $(echo $HYPR_DIR)
 
 
 cp -rf $NEW_WALL ~/.cache/current_wallpaper

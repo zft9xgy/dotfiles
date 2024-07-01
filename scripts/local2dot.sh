@@ -58,37 +58,4 @@ echo "[.zshrc] done..."
 echo ""
 echo "[all] done..."
 
-notify-send -h int:value:25 "Copy from local to dotfiles" 
-
-
-#!/bin/bash
-
-# Pregunta si desea proceder con el commit
-read -p "¿Quieres proceder con el commit? Presiona Enter para continuar, 'q' para salir: " respuesta_commit
-
-# Verifica la respuesta del usuario
-if [ "$respuesta_commit" == "q" ]; then
-    echo "Saliendo del script sin realizar el commit."
-    exit 0
-fi
-
-# Cambia al directorio de los dotfiles
-cd ~/shared-across/dotfiles
-
-# Agrega todos los archivos al área de preparación
-git add . && notify-send -h int:value:50 "Git add [1/3]" 
-
-
-# Pregunta si desea establecer un mensaje de commit personalizado
-read -p "¿Mensaje de commit? Presiona Enter para 'Updates' o introduce tu mensaje: " mensaje_commit
-
-# Establece el mensaje de commit predeterminado si no se proporciona uno
-mensaje_commit=${mensaje_commit:-"Updates"}
-
-# Realiza el commit
-git commit -m "$mensaje_commit" && notify-send -h int:value:75 "Git commit [2/3]" 
-
-# Realiza el push al repositorio remoto (cambiar 'main' por el nombre de tu rama si es diferente)
-git push origin main  && notify-send -h int:value:100 "Git push [3/3]" 
-
-echo "Operación completada exitosamente."
+notify-send -h int:value:100 "Copy from local to dotfiles" 
