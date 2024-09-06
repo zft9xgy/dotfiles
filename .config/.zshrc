@@ -3,6 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export DJANGO_SUPERUSER_PASSWORD='Holacaracola1'
+
 
 #ZSH_THEME="af-magic"
 ZSH_THEME="af-magic"
@@ -24,7 +26,7 @@ alias lampp="/opt/lampp/lampp"
 # Apps
 alias gamma="sh ~/shared-across/dotfiles/scripts/gamma-auto.sh"
 alias reload="sh ~/shared-across/dotfiles/scripts/reload.sh"
-alias filenio="~/shared-across/opt/filen.AppImage &>/dev/null & disown"
+alias filenio="/opt/filenio/filen.AppImage &>/dev/null & disown"
 
 #python
 alias py="python"
@@ -38,3 +40,7 @@ alias pmm="python manage.py migrate"
 #pacman
 alias psyu="sudo pacman -Syu"
 alias ysyu="yay -Syu"
+
+
+#work
+alias rc="codium /home/jade/Documents/rafaelcosquiere.com && exit"

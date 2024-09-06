@@ -7,16 +7,15 @@
         "cpu",
         "memory",
         "tray",
-        "hyprland/window"
+        "custom/backlight"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
         "custom/wallpaper",
-        // "network",
+        "network",
         "pulseaudio",
-        "custom/backlight",
         "clock"
     ],
     "pulseaudio": {
@@ -108,7 +107,7 @@
     "custom/wallpaper": {
         "format": "",
         "on-click": "sh ~/shared-across/dotfiles/scripts/random-wall.sh",
-        "on-click-right": "thunar ~/shared-across/wallpapers"
+        "on-click-right": "thunar ~/shared-across/misc/wallpapers"
     },
     "custom/backlight": {
         "format": "{}",
